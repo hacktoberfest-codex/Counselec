@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>Understanding of Chemistry</h3>
+                    <p>To be a good flavour chemist, as the name suggests, you need to  have a very solid understanding of chemistry. Recreating, preserving     and infusing flavours is all a game of chemicals. You need to have  enough technical knowledge (updated from time to time) of chemicals,     food components and additives.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img3.gif" alt="">
+                 </div>
+            </div>
+        </div>
+
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>Strong Olfactory and Gustatory Senses</h3>
+                    <p>Yes, you really do need to have very strong senses of smell and taste both. It is not just the taste that sets flavours apart from each other. You need to remember that our mouth actually waters after smelling the food! Food that smells great will have an enhanced flavour as well.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img2.gif" alt="">
+                 </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>Creativity</h3>
+                    <p>This is probably the most underrated aspect of this job. Creativity goes a long way in helping you to come up with just the right flavour. It is what will keep you going, even after failing countless times. It will keep you inspired to come up with yet another unique combination.</p>
+                </div>
+                <div class="image">
+                    <img src="images/img32.gif" alt="">   
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>Analytical Skills</h3>
+                    <p>As is evident, you need excellent analytical skills to be able to make sense of what you are doing. You have to first identify different components and flavours. Then, you need to analySe them correctly to be able to arrive at your desired result. These skills will help you make progress and realise what might or might not work.</p>
+                </div>
+                <div class="image">
+                    <img src="images/skills.png" alt="">
+                 </div>
+            </div>
+        </div>
+
+        <div id="prev" onclick="prev()"> < </div>
+        <div id="next" onclick="next()"> > </div>
+    </div>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index+1) %slides.length;
+            slides[index].classList.add('active');
+        }
+
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index-1 + slides.length) %slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(next , 25000);
+
+    </script>
+
+    
+</body>
+</html>

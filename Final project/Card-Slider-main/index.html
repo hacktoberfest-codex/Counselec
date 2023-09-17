@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Slider |Dev Mode</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+
+  <section class="swiper mySwiper">
+
+    <div class="swiper-wrapper">
+
+     
+      
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="images/Laboratory.gif" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Junior Flavour Chemist</span>
+          <p class="card__text">A Junior Flavor Chemist is slightly more advanced in terms of experience and knowledge in flavor chemistry.they may have greater involvement in the creative process of flavor creation and modification.Junior Flavor Chemists  involved in more hands-on flavor chemistry work.</p>
+        </div>
+      </div>
+
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="images/Setup Wizard.gif" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Senior Flavour Chemist</span>
+          <p class="card__text">A senior flavorist is an experienced professional in the field of flavor chemistry and sensory evaluation. They play a crucial role in the food and beverage industry, as well as in the fragrance and cosmetics industries.Senior flavorists are highly valued professionals in the food and fragrance industries due to their ability to create distinctive and marketable products</p>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="images/Profile data.gif" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Assistant Flavourist</span>
+          <p class="card__text">A Ass. flavorist is a professional responsible for creating and developing flavors used in various food and beverage products. Developing new and unique flavors by combining various natural and synthetic ingredients.</p>
+        </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+          <img src="images/eating a variety of foods.gif" alt="card image">
+        </div>
+
+        <div class="card__content">
+          <span class="card__title">Product Developer</span>
+          <p class="card__text">Food Product Developers play a crucial role in ensuring that food products meet consumer expectations for taste, quality, and safety. They bridge the gap between culinary creativity and food science, working to deliver delicious and marketable food products to consumers.Maintain detailed records of recipes, production processes, and quality control measures.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 300,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+</body>
+</html>

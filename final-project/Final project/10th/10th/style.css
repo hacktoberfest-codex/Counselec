@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Nunito:wght@500&family=Poppins:wght@200&display=swap');
+
+     *{
+        /* font-family: 'Nunito' , sans-serif; */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none; border: none;
+        text-decoration: none;
+        /* text-transform: capitalize; */
+
+     }
+
+     .container{
+        position: relative;
+     }
+
+
+     .container .slide-container .slide{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 20px 9%;
+        padding-bottom:70px ;
+     }
+
+     .container .slide-container .slide .content{
+        flex: 1 1 350px;
+        /* animation: slideContent .4s linear .6s backwards; */
+     }
+
+     @keyframes slideContent{
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+     }
+
+     .container .slide-container .slide .image{
+        flex: 1 1 500px;
+     }
+     .container .slide-container .slide .image img{
+        width:100% ;
+        animation: slideImage .4s linear ;
+     }
+     @keyframes slideImage{
+        0%{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+     }
+
+     .container .slide-container .slide h3{
+        font-weight: bold;
+        font-size: 25px;
+        color: rgb(0, 0, 0);
+        padding-bottom: 30px;
+        /* font-size: 35px;
+        color: #333; */
+     }
+
+     .container .slide-container .slide p{
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 28px;
+        color: rgb(10, 9, 9);
+        /* font-size:16px;
+        color: #666;
+        padding: 10px 0; */
+     }
+
+     /* .container .slide-container .slide .content .btn{
+        margin-top: 10px;
+        display: inline-block;
+        background: #666;
+        color: #fff;
+        font-size: 17px;
+        padding: 9px 40px;
+     } */
+
+     /* .container .slide-container .slide .content .btn:hover{
+        background: #333;
+     } */
+
+     .container .slide-container{
+        display: none;
+     }
+
+     .container .slide-container.active{
+        display: block;
+     }
+     .container .slide-container:nth-child(1) .slide{
+        background: linear-gradient(90deg ,  #f9f9f9 70% , rgb(64,123,255).1% );
+     }
+     .container .slide-container:nth-child(2) .slide{
+        background: linear-gradient(90deg ,  #f9f9f9 70% , rgb(146, 227,169) 30.1% );
+     }
+     .container .slide-container:nth-child(3) .slide{
+        background: linear-gradient(90deg ,  #f9f9f9 70% , rgb(186, 104, 204) 30.1% );
+      } 
+      /* .container .slide-container:nth-child(4) .slide{
+        background: linear-gradient(90deg ,  #f9f9f9 70% , #2acb75 30.1% );
+      }  */
+     .container #prev,
+     .container #next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        background: #333;
+        height: 50px;
+        width: 40px;
+        line-height: 50px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: bolder;
+     } 
+     .container #prev:hover,.container #next:hover{
+        background: #666;
+     }
+     .container #prev{
+        left: 20px;
+     }
+
+     .container #next{
+        right: 20px;
+     }
+
+     @media (max-width:500px){
+        .container #prev{
+            left: 0px;
+            top: 60%;
+         }
+    
+         .container #next{
+            right: 0px;
+            top: 60%;
+         }
+     }
